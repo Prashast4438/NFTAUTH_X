@@ -1,0 +1,5 @@
+WARNING:tensorflow:`input_shape` is undefined or non-square, or `rows` is not in [96, 128, 160, 192, 224]. Weights for input shape (224, 224) will be loaded as the default.
+ * Serving Flask app 'ai_server'
+ * Debug mode: on
+Address already in use
+Port 5050 is in use by another program. Either identify and stop that program, or start the server with a different port.

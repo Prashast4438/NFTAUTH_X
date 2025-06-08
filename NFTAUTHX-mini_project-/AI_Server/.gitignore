@@ -1,0 +1,7 @@
+myenv/
+AI_Server/myenv/
+
+# Ignore large binary files
+*.dylib
+*.so
+
