@@ -34,7 +34,7 @@ nft_Auth_final/
 - **Blockchain**: Ethereum, ethers.js
 - **Image Processing**: perceptual hashing (pHash)
 - **AI**: Image similarity detection
-- **Storage**: IPFS for decentralized storage
+- **Storage**: SQL -Lite Database for storing image embeddings
 
 ## Setup and Installation
 
