@@ -69,10 +69,11 @@ function App() {
         try {
             // Fix: Remove the leading slash to avoid double slash in URL
             const endpoint = action === "register" ? "register" : "verify";
+            const backendUrl = process.env.REACT_APP_BACKEND_URL;
             
             // Detailed logging for debugging
             console.log("Form submission details:", {
-                url: `http://localhost:3001/${endpoint}`,
+                url: `${backendUrl}/${endpoint}`,
                 method: 'POST',
                 action: action,
                 nftName: nftName,
@@ -82,7 +83,7 @@ function App() {
             });
             
             console.log("Sending fetch request...");
-            const response = await fetch(`http://localhost:3001/${endpoint}`, {
+            const response = await fetch(`${backendUrl}/${endpoint}`, {
                 method: 'POST',
                 body: formData,
             });
