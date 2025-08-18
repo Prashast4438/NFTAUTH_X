@@ -32,6 +32,7 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Accept', 'Origin', 'X-Requested-With'],
     credentials: true
 }));
+const AI_SERVER_URL = process.env.AI_SERVER_URL || "http://localhost:5050";
 
 // Add logging middleware
 app.use((req, res, next) => {
@@ -638,7 +639,7 @@ app.post("/register", upload.single("image"), async (req, res) => {
             aiFormData.append('image', fileBuffer, { filename: path.basename(req.file.path) });
             aiFormData.append('name', name);
 
-            const aiResponse = await axios.post('http://localhost:5050/register', aiFormData, {
+            const aiResponse = await axios.post(`${AI_SERVER_URL}/register`, aiFormData, {
                 headers: aiFormData.getHeaders()
             });
 
